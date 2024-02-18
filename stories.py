@@ -1,5 +1,3 @@
-"""Madlibs Stories."""
-
 
 class Story:
     """Madlibs story.
@@ -22,16 +20,12 @@ class Story:
     """
 
     def __init__(self, code, title, words, text):
-        """Create story with words and template text."""
-
         self.code = code
         self.title = title
         self.prompts = words
         self.template = text
 
     def generate(self, answers):
-        """Substitute answers into text."""
-
         text = self.template
 
         for (key, val) in answers.items():
