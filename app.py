@@ -10,7 +10,6 @@ debug = DebugToolbarExtension(app)
 
 @app.route("/")
 def ask_story():
-    """Show list-of-stories form."""
 
     return render_template("select-story.html",
                            stories=stories.values())
@@ -18,7 +17,6 @@ def ask_story():
 
 @app.route("/questions")
 def ask_questions():
-    """Generate and show form to ask words."""
 
     story_id = request.args["story_id"]
     story = stories[story_id]
@@ -33,7 +31,6 @@ def ask_questions():
 
 @app.route("/story")
 def show_story():
-    """Show story result."""
 
     story_id = request.args["story_id"]
     story = stories[story_id]
